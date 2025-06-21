@@ -15,6 +15,10 @@ public class Invoice {
 		int n = 0;
 		double result = 0.0;
 		System.out.println("==================================");
+		System.out.printf("%20s\n","INVOICE");
+		System.out.println("==================================");
+		System.out.printf(" %-10s\n %-30s\n",this.p.getName(),this.p.getAddrs());
+		System.out.println("----------------------------------");
 		System.out.printf("%s %6s %12s %7s\n","Index","List","Qty","Price");
 		for (Order i : this.order) {
 			System.out.printf("%3d %8s %8.2f  %d  %6.2f\n",
