@@ -10,6 +10,17 @@ public class Invoice {
 		this.p = new Person(name, addrs);
 		this.order = new ArrayList();
 	}
+	
+	public void getDisplay() {
+		for (Order i : this.order) {
+			System.out.printf("%8s %5.4f N: %d %5.4f\n",
+					i.getItem().getName(),
+					i.getItem().getPrice(),
+					i.getNumber(),
+					i.getRP()
+					);
+		}
+	}
 
 	public static void main(String[] args) {
 		
@@ -27,9 +38,7 @@ public class Invoice {
 		inv.order.add(new Order(tea,1));
 		inv.order.add(new Order(dessert,3));
 		
-//		for (Order i : inv.order) {
-//			System.out.println(i.getResultP());
-//		}
+		inv.getDisplay();
 
 	}
 

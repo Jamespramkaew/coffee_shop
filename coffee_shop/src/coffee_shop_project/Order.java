@@ -15,6 +15,18 @@ public class Order {
 		this.resultPrice = this.number * this.item.getPrice();
 	}
 	
+	public Item getItem() {
+		return this.item;
+	}
+	
+	public int getNumber() {
+		return this.number;
+	}
+	
+	public double getRP() {
+		return this.resultPrice;
+	}
+	
 	//Test
 	public double getResultP() {
 		return this.resultPrice;
